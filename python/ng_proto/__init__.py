@@ -1,4 +1,4 @@
-
+from ._logging import getLogger
 from .node import Add
 from .plug import InputPlug, OutputPlug
 from .connection import Connection

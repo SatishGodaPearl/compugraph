@@ -1,11 +1,5 @@
-import logging
-
-log = logging.getLogger(__name__)
-handler = logging.StreamHandler()
-formatter = logging.Formatter('%(levelname)s {0}: %(message)s'.format(__name__))
-handler.setFormatter(formatter)
-log.addHandler(handler)
-log.setLevel(logging.DEBUG)
+from ng_proto import getLogger
+log = getLogger(__name__)
 
 
 class Plug(object):
