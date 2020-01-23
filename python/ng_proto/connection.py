@@ -1,8 +1,8 @@
 import logging
 
-log = logging.getLogger()
+log = logging.getLogger(__name__)
 handler = logging.StreamHandler()
-formatter = logging.Formatter('%(levelname)s: %(message)s')
+formatter = logging.Formatter('%(levelname)s {0}: %(message)s'.format(__name__))
 handler.setFormatter(formatter)
 log.addHandler(handler)
 log.setLevel(logging.DEBUG)
